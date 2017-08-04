@@ -15,6 +15,7 @@ class myEmail(object):
         smtp_host = self.options['smtp_host']
         smtp_port = self.options['smtp_port']
         smtp_user = self.options['smtp_user']
+		smtp_alias = self.options['smtp_alias']
         smtp_password = self.options['smtp_password']
         mail_to_list = self.options['mail_to_list']
         # mail_to_list = [ '14339989@qq.com','jianbo.yu@agrant.cn' ]
@@ -45,7 +46,7 @@ class myEmail(object):
         msg.attach(att1)
         msg.attach(att2)
         msg['To'] = ",".join(mail_to_list)
-        msg['from'] = smtp_user
+		msg['from'] = '%s<%s>' %(smtp_alias,smtp_user)
         msg['subject'] = 'Hello World {0}   {1}'.format(os.popen("hostname").read(),datetime.datetime.now())
 
         server = smtplib.SMTP_SSL()

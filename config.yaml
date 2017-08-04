@@ -3,5 +3,6 @@ SMTP:
     smtp_host: smtp.exmail.qq.com
     smtp_port: 465
     smtp_user:  Alert@agrant.cn
+    smtp_alias: Alert1111
     smtp_password: 
     mail_to_list: ['14339989@qq.com','jianbo.yu@agrant.cn']
