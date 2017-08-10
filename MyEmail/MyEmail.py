@@ -27,7 +27,7 @@ class myEmail(object):
         <p>故障服务:</p>
         <p>故障时间:{2}</p>
         '''.format(smtp_host,smtp_port,datetime.datetime.now())
-        mail_content = MIMEText(content,_subtype='html',_charset='utf-8')
+        mail_content = MIMEText(content,_subtype='plain',_charset='utf-8')
         #构造附件1
         file1 = 'D:\\1.txt'
         att1 = MIMEText(open('%s' %(file1,),'rb').read(), 'base64', 'utf-8')
